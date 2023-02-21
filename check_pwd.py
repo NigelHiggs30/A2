@@ -1,3 +1,13 @@
+def is_digit(test):
+    answer = 0
+    check = list(test)
+    for x in check:
+        if x.isdigit()==True:
+            answer+=1
+        else:
+            continue
+    return answer
+
 def check_pwd(pwd):
     if len(pwd)<8:
         return False
@@ -8,5 +18,6 @@ def check_pwd(pwd):
         return False
     if not any(x.isupper() for x in pwd):
         return False
-
+    if is_digit(pwd)>=1:
+        return False
     return True
