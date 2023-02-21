@@ -9,5 +9,8 @@ class TestCase(unittest.TestCase):
     def test2(self):
         input = "0"
         self.assertFalse(check_pwd(input))
+    def test3(self):
+        input="00000000000000000000000"
+        self.assertFalse(check_pwd(input))
 if __name__ == "__main__":
     unittest.main()
