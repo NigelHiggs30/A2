@@ -12,5 +12,9 @@ class TestCase(unittest.TestCase):
     def test3(self):
         input="00000000000000000000000"
         self.assertFalse(check_pwd(input))
+    def test4(self):
+        input="ADKSNDESKA"
+        self.assertFalse(check_pwd(input))
+    
 if __name__ == "__main__":
     unittest.main()
