@@ -7,8 +7,20 @@ def is_digit(test):
         else:
             continue
     return answer
+def symbol_find(test):
+    answer = 0
+    symbols = "~`!@#$%^&*()_+-="
+    check = list(test)
+    for x in check:
+        for y in symbols:
+            if x ==y:
+                answer+=1
+            else:
+                continue
+    return answer
 
 def check_pwd(pwd):
+
     if len(pwd)<8:
         return False
     if len(pwd)>20:
@@ -19,5 +31,10 @@ def check_pwd(pwd):
     if not any(x.isupper() for x in pwd):
         return False
     if is_digit(pwd)>=1:
+        print("test5")
         return False
+    if symbol_find(pwd)>=1:
+        return False
+    
+    
     return True
